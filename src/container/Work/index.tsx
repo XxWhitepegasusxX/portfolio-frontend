@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 
 import AppWrap from '@/wrapper/AppWrap';
 import { urlFor, client } from '@/client';
+import MotionWrap from '@/wrapper/MotionWrap';
 
 interface Work {
   title: string;
@@ -17,7 +18,7 @@ interface Work {
 const Work = () => {
 
   const [activeFilter, setActiveFilter] = useState('All')
-  const [animateCard, setAnimateCard] = useState([{y: 0, opacity: 1}])
+  const [animateCard, setAnimateCard] = useState([{opacity: 1, y: 0}])
   const [Works, setWorks] = useState<Work[]>([]);
   const [filterWork, setFilterWork] = useState<Work[]>([]);
 
@@ -91,4 +92,4 @@ const Work = () => {
   )
 }
 
-export default AppWrap(Work, 'work', '')
+export default AppWrap(MotionWrap(Work, "app__work"), 'work', 'app__primarybg');

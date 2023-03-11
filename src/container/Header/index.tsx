@@ -53,4 +53,4 @@ const Header = () => {
   )
 }
 
-export default AppWrap(Header, 'header', '')
+export default AppWrap(Header, 'home', '')
