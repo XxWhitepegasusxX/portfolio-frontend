@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 
-import { About, Footer, Header, Skills, Testimonial, Work } from '@/container';
+import { About, Footer, Header, Skills, Work } from '@/container';
 import { Navbar } from '@/components';
 
 export default function Home() {
@@ -19,7 +19,6 @@ export default function Home() {
         <About/>
         <Work/>
         <Skills/>
-        <Testimonial/>
         <Footer/>
       </main>
     </>
