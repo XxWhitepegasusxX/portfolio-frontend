@@ -21,20 +21,22 @@ const Footer = () => {
   const handleSubmit = () => {
     if(name == "" || email == '' || message === ''){
       alert("All information needed!")
+      return;
+    }else{
+      setLoading(true)
+  
+      const templateParams = {
+        from_name: name,
+        email: email,
+        message: message
+      }
+  
+      emailjs.send("service_6klvc2q", "template_fooubbk", templateParams, "5Knj5cQutiTwgrie1").then((response) => {
+        console.log("Email enviado", response.status, response.text)
+      }, err => {
+        console.log(err)
+      }).finally(() => submit())
     }
-    setLoading(true)
-
-    const templateParams = {
-      from_name: name,
-      email: email,
-      message: message
-    }
-
-    emailjs.send("service_6klvc2q", "template_fooubbk", templateParams, "5Knj5cQutiTwgrie1").then((response) => {
-      console.log("Email enviado", response.status, response.text)
-    }, err => {
-      console.log(err)
-    }).finally(() => submit())
   }
 
   return (
