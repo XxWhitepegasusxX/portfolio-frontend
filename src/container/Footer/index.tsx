@@ -50,7 +50,7 @@ const Footer = () => {
         </div>
         <div className="app__footer-card cv">
           <img src="/images/document.png" alt="Whatsapp" />
-          <a href="AlexanderAlmeidaCV(English).pdf" download="AlexanderAlmeidaCV(English).pdf" className='p-text'>My CV</a>
+          <a href="AlexanderAlmeida_Resume.pdf" download="AlexanderAlmeida_Resume.pdf" className='p-text'>My CV</a>
         </div>
         <div className="app__footer-card">
           <img src="/images/mobile.png" alt="Whatsapp" />
